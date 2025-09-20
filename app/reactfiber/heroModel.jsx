@@ -59,8 +59,6 @@ export default function HeroModel() {
         <Model />
         <BotModel />
 
-        {/* Controls */}
-        <OrbitControls />
       </Canvas>
     </div>
   )
