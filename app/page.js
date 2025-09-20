@@ -14,7 +14,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 // Register ScrollTrigger
-if (typeof window !== 'undefined') {
+if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
 
@@ -144,11 +144,11 @@ const HomePage = () => {
             Problem Statement
           </h2>
           <p className="text-base mt-2" >
-          Sikkim's hilly farms face long, rainless summers that make conventional irrigation unreliable, slashing yields and wasting scarce water. The region needs a sustainable, precision irrigation approach tailored to steep terrain.
+          Sikkims hilly farms face long, rainless summers that make conventional irrigation unreliable, slashing yields and wasting scarce water. The region needs a sustainable, precision irrigation approach tailored to steep terrain.
           </p>
         </div>
       
-      <div ref={cardsRef} style={{ height: '600px', position: 'absolute', right: 100, top:900  }} className="mt-[-10vh]" >
+      <div ref={cardsRef} style={{ height: "600px", position: "absolute", right: 100, top:900  }} className="mt-[-10vh]" >
   <CardSwap
     cardDistance={60}
     verticalDistance={70}
@@ -162,7 +162,7 @@ const HomePage = () => {
     </Card>
     <Card>
       <h3 className="text-xl font-bold">Real-Time Disease Detection:</h3>
-      <p className="pb-2 pt-1 text-sm text-gray-500" >Onboard AI scans plants for diseases and sends immediate alerts to the farmer's phone.</p>
+      <p className="pb-2 pt-1 text-sm text-gray-500" >Onboard AI scans plants for diseases and sends immediate alerts to the farmers phone.</p>
       <img src="./problemStatement/two.jpeg" alt="Card 2" className="w-full h-70 object-cover rounded-lg pb-0 pt-0" />
     </Card>
     <Card>

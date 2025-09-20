@@ -1,6 +1,6 @@
 "use client"
 
-import React from 'react';
+import React from "react";
 
 const SupportGuidancePage = () => {
   return (
@@ -19,7 +19,7 @@ const SupportGuidancePage = () => {
             Support & Guidance
           </h1>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
-            We're grateful for the incredible support and guidance from industry leaders who believe in our slam-bot project
+            Were grateful for the incredible support and guidance from industry leaders who believe in our slam-bot project
           </p>
           <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto mt-6 rounded-full"></div>
         </div>
@@ -54,10 +54,10 @@ const SupportGuidancePage = () => {
                   "The slam-bot project showcases exceptional innovation in autonomous navigation. The technical implementation and real-world applications are truly impressive."
                 </p>
                 <p className="text-gray-300 italic text-lg leading-relaxed border-l-4 border-purple-400 pl-4">
-                  "This project represents the future of robotics and SLAM technology. The team's dedication and technical prowess are remarkable."
+                  "This project represents the future of robotics and SLAM technology. The teams dedication and technical prowess are remarkable."
                 </p>
                 <p className="text-gray-300 italic text-lg leading-relaxed border-l-4 border-pink-400 pl-4">
-                  "We're proud to support such groundbreaking work that pushes the boundaries of what's possible in robotics."
+                  "Were proud to support such groundbreaking work that pushes the boundaries of whats possible in robotics."
                 </p>
               </div>
               
@@ -96,7 +96,7 @@ const SupportGuidancePage = () => {
                   "The slam-bot demonstrates outstanding integration of SLAM algorithms with real-time navigation. The engineering approach is both practical and innovative."
                 </p>
                 <p className="text-gray-300 italic text-lg leading-relaxed border-l-4 border-pink-400 pl-4">
-                  "As a robotics engineer, I'm impressed by the robust implementation and the potential for real-world deployment. This project sets new standards."
+                  "As a robotics engineer, Im impressed by the robust implementation and the potential for real-world deployment. This project sets new standards."
                 </p>
                 <p className="text-gray-300 italic text-lg leading-relaxed border-l-4 border-cyan-400 pl-4">
                   "The technical depth and execution quality make this slam-bot project a standout example of modern robotics engineering."

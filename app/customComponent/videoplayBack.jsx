@@ -4,9 +4,9 @@ import Plasma from "../backgrounds/backgroundFour"
 
 const VideoPlayBack = () => {
   const videos = [
-    { src: "/videos/Videoone.mp4", title: "Heading 1" },
-    { src: "/videos/Videotwo.mp4", title: "Heading 2" },
-    { src: "/videos/VideoThree.mp4", title: "Heading 3" },
+    { src: "/videos/Videoone.mp4", title: "Localization" },
+    { src: "/videos/Videotwo.mp4", title: "Mapping" },
+    { src: "/videos/VideoThree.mp4", title: "Movement" },
   ];
 
   return (
@@ -46,19 +46,19 @@ const VideoPlayBack = () => {
                 key={index}
                 className="group relative w-full max-w-sm bg-gray-900 pt-2 backdrop-blur-sm rounded-xl overflow-hidden border border-transparent hover:border-transparent transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 rounded-xl"
                 style={{
-                  // background: 'linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(0, 0, 255, 0.1))',
-                  // borderImage: 'linear-gradient(135deg, #00ffff, #0000ff, #ff00ff, #00ffff) 1',
+                  // background: "linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(0, 0, 255, 0.1))",
+                  // borderImage: "linear-gradient(135deg, #00ffff, #0000ff, #ff00ff, #00ffff) 1",
                 }}
               >
                 {/* Gradient Border Effect on Hover */}
                 <div 
                   className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                   style={{
-                    background: 'linear-gradient(135deg, #00ffff, #0000ff, #ff00ff, #00ffff)',
-                    padding: '2px',
-                    WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
-                    WebkitMaskComposite: 'xor',
-                    maskComposite: 'exclude'
+                    background: "linear-gradient(135deg, #00ffff, #0000ff, #ff00ff, #00ffff)",
+                    padding: "2px",
+                    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                    WebkitMaskComposite: "xor",
+                    maskComposite: "exclude"
                   }}
                 >
                   <div className="w-full h-full bg-black-500 backdrop-blur-sm rounded-xl"></div>
@@ -76,7 +76,7 @@ const VideoPlayBack = () => {
                       playsInline
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                       style={{
-                        filter: 'brightness(0.9) contrast(1.1) saturate(1.1)'
+                        filter: "brightness(0.9) contrast(1.1) saturate(1.1)"
                       }}
                     />
                     {/* Video Overlay */}

@@ -63,7 +63,7 @@ const HeroContent = () => {
             <div>
                 <h2 ref={titleRef} className="text-4xl font-bold mb-2" >
                     {displayedText}
-                    <span className={`inline-block w-0.5 h-10 bg-white ml-1 ${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity duration-100`}>
+                    <span className={`inline-block w-0.5 h-10 bg-white ml-1 ${showCursor ? "opacity-100" : "opacity-0"} transition-opacity duration-100`}>
                     </span>
                 </h2>
                 <p ref={textRef} className="">

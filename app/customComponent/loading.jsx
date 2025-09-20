@@ -11,7 +11,7 @@ export default function SlamBotLoading() {
   const tips = [
     "Slam Bot analyzes over 100 data points per game to improve your performance.",
     "The average NBA player has a vertical leap of 28 inches.",
-    "Slam Bot's AI can predict shooting success with 92% accuracy.",
+    "Slam Bots AI can predict shooting success with 92% accuracy.",
     "The first slam dunk in basketball history was performed by Joe Fortenberry in 1936.",
     "Slam Bot helped increase player shooting accuracy by 15% in clinical trials."
   ]
