@@ -4,9 +4,9 @@ import Plasma from "../backgrounds/backgroundFour"
 
 const VideoPlayBack = () => {
   const videos = [
-    { src: "/videos/Videoone.mp4", title: "Localization" },
-    { src: "/videos/Videotwo.mp4", title: "Mapping" },
-    { src: "/videos/VideoThree.mp4", title: "Movement" },
+    { src: "./videos/Videoone.mp4", title: "Localization" },
+    { src: "./videos/Videotwo.mp4", title: "Mapping" },
+    { src: "./videos/VideoThree.mp4", title: "Movement" },
   ];
 
   return (
@@ -30,17 +30,17 @@ const VideoPlayBack = () => {
       {/* Main Content Container */}
       <div className="relative z-10 w-full h-full flex items-center justify-center">
         {/* Video Cards Container */}
-        <div className="w-full max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full max-w-8xl mx-auto px-4  sm:px-6 lg:px-8">
           {/* Title Section */}
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl my-6 font-bold text-white mb-10">
               MAPPING OF SLAMBOT.ai
             </h1>
          
           </div>
 
           {/* Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8 justify-items-center rounded-xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 mt-20 xl:grid-cols-3 gap-6 lg:gap-8 justify-items-center rounded-xl">
             {videos.map((video, index) => (
               <div
                 key={index}
