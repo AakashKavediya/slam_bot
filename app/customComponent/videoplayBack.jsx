@@ -44,10 +44,10 @@ const VideoPlayBack = () => {
             {videos.map((video, index) => (
               <div
                 key={index}
-                className="group relative w-full max-w-sm bg-black/20 backdrop-blur-sm rounded-xl overflow-hidden border border-transparent hover:border-transparent transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20"
+                className="group relative w-full max-w-sm bg-gray-900 pt-2 backdrop-blur-sm rounded-xl overflow-hidden border border-transparent hover:border-transparent transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 rounded-xl"
                 style={{
-                  background: 'linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(0, 0, 255, 0.1))',
-                  borderImage: 'linear-gradient(135deg, #00ffff, #0000ff, #ff00ff, #00ffff) 1',
+                  // background: 'linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(0, 0, 255, 0.1))',
+                  // borderImage: 'linear-gradient(135deg, #00ffff, #0000ff, #ff00ff, #00ffff) 1',
                 }}
               >
                 {/* Gradient Border Effect on Hover */}
@@ -61,7 +61,7 @@ const VideoPlayBack = () => {
                     maskComposite: 'exclude'
                   }}
                 >
-                  <div className="w-full h-full bg-black/20 backdrop-blur-sm rounded-xl"></div>
+                  <div className="w-full h-full bg-black-500 backdrop-blur-sm rounded-xl"></div>
                 </div>
                 
                 {/* Card Content */}
