@@ -4,8 +4,8 @@ import Plasma from "../backgrounds/backgroundFour"
 
 const VideoPlayBack = () => {
   const videos = [
-    { src: "./videos/Videoone.mp4", title: "Localization" },
-    { src: "./videos/Videotwo.mp4", title: "Mapping" },
+    { src: "./videos/videoone.mp4", title: "Localization" },
+    { src: "./videos/videotwo.mp4", title: "Mapping" },
     { src: "./videos/VideoThree.mp4", title: "Movement" },
   ];
 
