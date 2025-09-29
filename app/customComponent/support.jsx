@@ -93,8 +93,8 @@ const SupportGuidancePage = () => {
 
               <div className="space-y-4">
                 <p className="text-gray-300 italic flex text-lg leading-relaxed border-l-4 border-purple-400 pl-4">
-                  <a href="https://www.linkedin.com/in/atulmehta05" className="mr-2 text-3xl" >  <FaInstagram color="#E4405F" /></a> 
-                  <a href="https://www.instagram.com/the.techtinkerer?igsh=MWZ3NDI4dmttbXQ5MA%3D%3D" className="mr-2 text-3xl"><FaLinkedin color="#0A66C2" /> </a>
+                  <a href="https://www.linkedin.com/in/atulmehta05" className="mr-2 text-3xl" > <FaLinkedin color="#0A66C2" />   </a> 
+                  <a href="https://www.instagram.com/the.techtinkerer?igsh=MWZ3NDI4dmttbXQ5MA%3D%3D" className="mr-2 text-3xl"><FaInstagram color="#E4405F" /> </a>
                 </p>
                 <p className="text-gray-300 italic text-lg leading-relaxed border-l-4 border-purple-400 pl-4">
                   The slam-bot demonstrates outstanding integration of SLAM algorithms with real-time navigation. The engineering approach is both practical and innovative.
