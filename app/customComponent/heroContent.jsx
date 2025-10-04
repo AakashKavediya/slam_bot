@@ -72,7 +72,7 @@ const HeroContent = () => {
             </div>
             <div ref={buttonRef}>
                 <button>
-                    <p className="text-white-500 bg-gray-500 px-6 py-2 rounded-lg mt-2" >Explore </p>
+                    <p className="text-white-500 bg-orange-500 px-6 py-2 rounded-lg mt-2" >Explore </p>
                 </button>
             </div>
             </div>

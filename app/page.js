@@ -12,7 +12,11 @@ import SlamBotLoading from "./customComponent/loading";
 import { useGSAPAnimation, useScrollAnimation } from "./hooks/useGSAPAnimation";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
+import PresentModel from './customComponent/presentModel'
+import MagicBento from "./customComponent/Dashboard";
+import Footer from "./customComponent/footer";
+import Masonry from "./customComponent/galaryFlow";
+import Feature from "./customComponent/feature";
 // Register ScrollTrigger
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -125,71 +129,213 @@ const HomePage = () => {
     return <SlamBotLoading />;
   }
 
+  const items = [
+    {
+      id: "1",
+      img: "./SlamBotPic/one.jpg",
+      url: "./SlamBotPic/one.jpg",
+      height: 400,
+    },
+    {
+      id: "2",
+      img: "./SlamBotPic/two.jpg",
+      url: "./SlamBotPic/two.jpg",
+      height: 350,
+    },
+    {
+      id: "3",
+      img: "./SlamBotPic/three.jpg",
+      url: "./SlamBotPic/three.jpg",
+      height: 450,
+    },
+    {
+      id: "4",
+      img: "./SlamBotPic/four.jpg",
+      url: "./SlamBotPic/four.jpg",
+      height: 300,
+    },
+    {
+      id: "5",
+      img: "./SlamBotPic/five.jpg",
+      url: "./SlamBotPic/five.jpg",
+      height: 500,
+    },
+    {
+      id: "6",
+      img: "./SlamBotPic/six.jpg",
+      url: "./SlamBotPic/six.jpg",
+      height: 400,
+    },
+    {
+      id: "7",
+      img: "./SlamBotPic/seven.jpg",
+      url: "./SlamBotPic/seven.jpg",
+      height: 350,
+    },
+    {
+      id: "8",
+      img: "./SlamBotPic/eight.jpg",
+      url: "./SlamBotPic/eight.jpg",
+      height: 450,
+    },
+    {
+      id: "9",
+      img: "./SlamBotPic/nine.jpg",
+      url: "./SlamBotPic/nine.jpg",
+      height: 300,
+    },
+    {
+      id: "10",
+      img: "./SlamBotPic/ten.jpg",
+      url: "./SlamBotPic/ten.jpg",
+      height: 500,
+    },
+    {
+      id: "11",
+      img: "./SlamBotPic/eleven.jpg",
+      url: "./SlamBotPic/eleven.jpg",
+      height: 400,
+    },
+    {
+      id: "12",
+      img: "./SlamBotPic/twelve.jpg",
+      url: "./SlamBotPic/twelve.jpg",
+      height: 350,
+    },
+    {
+      id: "13",
+      img: "./SlamBotPic/thirteen.jpg",
+      url: "./SlamBotPic/thirteen.jpg",
+      height: 450,
+    },
+    {
+      id: "14",
+      img: "./SlamBotPic/forteen.jpg",
+      url: "./SlamBotPic/forteen.jpg",
+      height: 300,
+    },
+    {
+      id: "15",
+      img: "./SlamBotPic/fifteen.jpg",
+      url: "./SlamBotPic/fifteen.jpg",
+      height: 500,
+    },
+    {
+      id: "16",
+      img: "./SlamBotPic/sixteen.jpg",
+      url: "./SlamBotPic/sixteen.jpg",
+      height: 400,
+    },
+    {
+      id: "17",
+      img: "./SlamBotPic/seventeen.jpg",
+      url: "./SlamBotPic/seventeen.jpg",
+      height: 350,
+    },
+    {
+      id: "18",
+      img: "./SlamBotPic/eighteen.jpg",
+      url: "./SlamBotPic/eighteen.jpg",
+      height: 450,
+    },
+    {
+      id: "19",
+      img: "./SlamBotPic/nineteen.jpg",
+      url: "./SlamBotPic/nineteen.jpg",
+      height: 300,
+    },
+    {
+      id: "20",
+      img: "./SlamBotPic/twenty.jpg",
+      url: "./SlamBotPic/twenty.jpg",
+      height: 500,
+    },
+    {
+      id: "21",
+      img: "./SlamBotPic/twentyOne.jpg",
+      url: "./SlamBotPic/twentyOne.jpg",
+      height: 400,
+    },
+    {
+      id: "22",
+      img: "./SlamBotPic/twentyTwo.jpg",
+      url: "./SlamBotPic/twentyTwo.jpg",
+      height: 350,
+    },
+    {
+      id: "23",
+      img: "./SlamBotPic/twentyThree.jpg",
+      url: "./SlamBotPic/twentyThree.jpg",
+      height: 450,
+    },
+    {
+      id: "24",
+      img: "./SlamBotPic/twentyFour.jpg",
+      url: "./SlamBotPic/twentyFour.jpg",
+      height: 300,
+    }
+];
+
   return(
-    <div className="w-full" >
+    <div className="w-full min-h-screen" style={{width: '100vw'}}>
 
       <HeroModel />
-      <div className="absolute top-0" >
-      <HeroContent />
-      </div>
-      <div className="bg-black-500 h-screen w-full flex flex-col align-center"  >
-      <Aurora
-  colorStops={["#3A29FF", "#FF94B4", "#FF3232"]}
-  blend={0.5}
-  amplitude={1.0}
-  speed={0.5}
-/>
-        <div ref={problemStatementRef} className="text-white text-left ml-10 absolute w-1/3 top-280  overflow-hidden" >
-          <h2 className="text-4xl font-bold" >
-            Problem Statement
-          </h2>
-          <p className="text-base mt-2" >
-          Sikkims hilly farms face long, rainless summers that make conventional irrigation unreliable, slashing yields and wasting scarce water. The region needs a sustainable, precision irrigation approach tailored to steep terrain.
-          </p>
-        </div>
+
+       <div className="absolute top-0 w-full h-screen">
+         <HeroContent />
+       </div>
       
-      <div ref={cardsRef} style={{ height: "600px", position: "absolute", right: 100, top:900  }} className="mt-[-10vh]" >
-  <CardSwap
-    cardDistance={60}
-    verticalDistance={70}
-    delay={3000}
-    pauseOnHover={false}
-  >
-    <Card>
-      <h3 className="text-xl font-bold">solution Precision Application:</h3>
-      <p className="pb-2 pt-1 text-sm text-gray-500" >Uses AI and sensors to deliver water and pesticides only where needed, cutting waste by 40–50%.</p>
-      <img src="./problemStatement/one.jpeg" alt="Card 1" className="w-full h-70 object-cover rounded-lg pb-0 pt-0" />
-    </Card>
-    <Card>
-      <h3 className="text-xl font-bold">Real-Time Disease Detection:</h3>
-      <p className="pb-2 pt-1 text-sm text-gray-500" >Onboard AI scans plants for diseases and sends immediate alerts to the farmers phone.</p>
-      <img src="./problemStatement/two.jpeg" alt="Card 2" className="w-full h-70 object-cover rounded-lg pb-0 pt-0" />
-    </Card>
-    <Card>
-      <h3 className="text-xl font-bold">Rainwater Monitoring:</h3>
-      <p className="pb-2 pt-1 text-sm text-gray-500" >Tracks rainwater tank levels and quality to optimize usage for irrigation and reduce external water needs.</p>
-      <img src="./problemStatement/three.jpeg" alt="Card 3" className="w-full h-70 object-cover rounded-lg pb-0 pt-0" />
-    </Card>
-    <Card>
-      <h3 className="text-xl font-bold">Actionable Insights:</h3>
-      <p className="pb-2 pt-1 text-sm text-gray-500" >Creates cloud-based farm health maps and reports for predictive planning and yield optimization.</p>
-      <img src="./problemStatement/four.jpeg" alt="Card 4" className="w-full h-70 object-cover rounded-lg pb-0 pt-0" />
-    </Card>
-  </CardSwap>
-</div>
-      </div>
+      
+      <div className="flex  flex-row ">
+       <div className="w-screen  h-half">
+         <MagicBento />
+       </div>
+
+       <div className=" " >
+        <Feature /> 
+       </div>
+       </div>
+
+
+
+       <div className="w-full h-screen">
+       <div className="w-full h-full">
+         <PresentModel />
+       </div>
+     </div>
+
       <div ref={videoRef}>
       <VideoPlayBack />
     </div>
-      <div ref={galleryRef} className="ml-[-600px] w-[200vw] h-[150vh]">
+      {/* <div ref={galleryRef} className="ml-[-600px] w-[200vw] h-[150vh]">
       <DemoGallery />
+    </div> */}
+
+
+    <div ref={galleryRef} className="w-full h-screen" style={{minHeight: '100vh'}}>
+      <Masonry
+        items={items}
+        ease="power3.out"
+        duration={0.6}
+        stagger={0.05}
+        animateFrom="bottom"
+        scaleOnHover={true}
+        hoverScale={0.95}
+        blurToFocus={true}
+        colorShiftOnHover={false}
+      />
     </div>
 
-    <div ref={supportRef}>
-      <SupportGuidancePage />
-    </div>
+        
+
+
+     <div ref={supportRef} className="w-full min-h-screen">
+       <SupportGuidancePage />
+     </div>
     
-      
+      <div>
+        <Footer />
+      </div>
     </div>
   )
 }

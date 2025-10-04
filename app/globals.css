@@ -47,3 +47,15 @@ body::-webkit-scrollbar {
 * {
   box-sizing: border-box;
 }
+
+/* Global grayscale filter for specific image containers */
+.gallery-image,
+.gallery-item img {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.gallery-image:hover,
+.gallery-item img:hover {
+  filter: grayscale(0%);
+}
