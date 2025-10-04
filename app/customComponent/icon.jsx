@@ -1,4 +1,4 @@
-// 'use client'
+'use client'
 
 import React from 'react'
 import {
@@ -10,6 +10,7 @@ import {
   Wifi,
   Zap,
 } from "lucide-react";
+import { useGSAPAnimation, fadeInUp } from '../hooks/useGSAPAnimation';
 
 /**
  * Simple reusable IconCard for display + accessibility
@@ -19,8 +20,13 @@ import {
  *  - size: numeric px size (default 36)
  */
 export default function IconCard({ Icon, title, size = 36 }) {
+  const cardRef = useGSAPAnimation((element) => {
+    fadeInUp(element);
+  }, []); // Empty dependency array since we want the animation to run once on mount
+
   return (
     <div
+      ref={cardRef}
       role="group"
       aria-label={title}
       style={{
