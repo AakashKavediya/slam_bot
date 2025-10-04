@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { useCallback } from 'react'
 import {
   Compass,
   Camera,
@@ -20,9 +20,11 @@ import { useGSAPAnimation, fadeInUp } from '../hooks/useGSAPAnimation';
  *  - size: numeric px size (default 36)
  */
 export default function IconCard({ Icon, title, size = 36 }) {
-  const cardRef = useGSAPAnimation((element) => {
+  const animationFunction = useCallback((element) => {
     fadeInUp(element);
-  }, []); // Empty dependency array since we want the animation to run once on mount
+  }, []); // Empty dependency array since fadeInUp doesn't change
+
+  const cardRef = useGSAPAnimation(animationFunction);
 
   return (
     <div

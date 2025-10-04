@@ -8,34 +8,44 @@ if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger)
 }
 
-export const useGSAPAnimation = (animationFunction, dependencies = []) => {
+export const useGSAPAnimation = (animationFunction) => {
   const elementRef = useRef(null)
+  const animationFunctionRef = useRef(animationFunction)
+
+  useEffect(() => {
+    animationFunctionRef.current = animationFunction
+  }, [animationFunction])
 
   useEffect(() => {
     if (!elementRef.current) return
 
     const ctx = gsap.context(() => {
-      animationFunction(elementRef.current)
+      animationFunctionRef.current(elementRef.current)
     }, elementRef)
 
     return () => ctx.revert()
-  }, dependencies)
+  }, []) // Only run on mount and cleanup on unmount
 
   return elementRef
 }
 
-export const useScrollAnimation = (animationFunction, dependencies = []) => {
+export const useScrollAnimation = (animationFunction) => {
   const elementRef = useRef(null)
+  const animationFunctionRef = useRef(animationFunction)
+
+  useEffect(() => {
+    animationFunctionRef.current = animationFunction
+  }, [animationFunction])
 
   useEffect(() => {
     if (!elementRef.current) return
 
     const ctx = gsap.context(() => {
-      animationFunction(elementRef.current)
+      animationFunctionRef.current(elementRef.current)
     }, elementRef)
 
     return () => ctx.revert()
-  }, dependencies)
+  }, [])
 
   return elementRef
 }
