@@ -120,7 +120,7 @@ const HomePage = () => {
     // Simulate loading time - you can adjust this duration
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 5000); // 5 seconds loading time
+    }, 2000); // 2 seconds loading time
 
     return () => clearTimeout(timer);
   }, []);

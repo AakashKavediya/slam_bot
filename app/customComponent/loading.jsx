@@ -18,7 +18,7 @@ export default function SlamBotLoading() {
   useEffect(() => {
     const interval = setInterval(() => {
       setProgress((prev) => {
-        let next = prev + Math.random() * 5
+        let next = prev + Math.random() * 15 // Increased increment speed
         if (next >= 100) {
           clearInterval(interval)
           setStatus("Ready to slam! Redirecting")
@@ -26,11 +26,11 @@ export default function SlamBotLoading() {
         }
         return next
       })
-    }, 200)
+    }, 100) // Decreased interval
 
     const tipInterval = setInterval(() => {
       setTipIndex((prev) => (prev + 1) % tips.length)
-    }, 5000)
+    }, 2000) // Decreased tip change interval
 
     return () => {
       clearInterval(interval)
