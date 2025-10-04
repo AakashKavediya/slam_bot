@@ -71,8 +71,16 @@ const HeroContent = () => {
                 </p>
             </div>
             <div ref={buttonRef}>
-                <button>
-                    <p className="text-white-500 bg-orange-500 px-6 py-2 rounded-lg mt-2" >Explore </p>
+                <button 
+                    onClick={() => {
+                        const element = document.getElementById('feature-section');
+                        if (element) {
+                            element.scrollIntoView({ behavior: 'smooth' });
+                        }
+                    }}
+                    className="text-white-500 bg-orange-500 hover:bg-orange-600 px-8 py-3 rounded-lg mt-2 transition-all duration-300 transform hover:scale-105 font-medium tracking-wide"
+                >
+                    Explore
                 </button>
             </div>
             </div>

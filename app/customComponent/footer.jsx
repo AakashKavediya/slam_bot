@@ -32,6 +32,7 @@ const Footer = () => {
               Pioneering autonomous robotics solutions for modern agriculture. 
               Transforming farming with advanced SLAM technology and AI-driven navigation systems.
             </p>
+            <div>
             <div className="flex space-x-4 text-white/50">
               <div className="flex items-center text-sm">
                 <FaMapMarkerAlt className="mr-2" size={14} />
@@ -41,6 +42,8 @@ const Footer = () => {
                 <FaPhone className="mr-2" size={14} />
                 <span>+91 85916 19938</span>
               </div>
+            </div>
+            
             </div>
           </div>
 
