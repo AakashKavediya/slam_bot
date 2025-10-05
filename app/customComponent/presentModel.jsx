@@ -12,7 +12,7 @@ import {
   Wifi,
   Zap,
 } from "lucide-react";
-import IconCard from './icon'
+import IconCard from './IconCard'
 // 3D Model Component using your custom model
 function Model({ modelPath, scale = 2, position = [0, 0, 0] }) {
   const { scene, error } = useGLTF(modelPath);
