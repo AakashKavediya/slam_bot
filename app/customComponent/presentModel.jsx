@@ -236,7 +236,7 @@ export default function HomePage() {
               <button className="primary-btn" onClick={() => window.open('https://threejs.org/docs/#examples/en/loaders/GLTFLoader', '_blank')}>
                 Structure Documentation
               </button>
-              <button className="secondary-btn" onClick={() => window.open('https://github.com/atulmehta2002/slambot', '_blank')}>
+              <button className="secondary-btn" onClick={() => window.open('', '_blank')}>
                 GitHub Repository
               </button>
             </div>
