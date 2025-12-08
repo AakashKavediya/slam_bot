@@ -17,6 +17,7 @@ import MagicBento from "./customComponent/Dashboard";
 import Footer from "./customComponent/footer";
 import Masonry from "./customComponent/galaryFlow";
 import Feature from "./customComponent/feature";
+import NewDashboard from "./customComponent/NewDashboard";
 // Register ScrollTrigger
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -284,8 +285,8 @@ const HomePage = () => {
        <div className="absolute top-0 w-full h-screen">
          <HeroContent />
        </div>
-      
-      
+
+     
       <div className="flex  flex-row ">
        <div className="w-screen  h-half">
          <MagicBento />
@@ -296,6 +297,9 @@ const HomePage = () => {
        </div>
        </div>
 
+       <div className="w-screen  h-half">
+         <NewDashboard />
+       </div>
 
 
        <div className="w-full h-screen">
