@@ -18,6 +18,7 @@ import Footer from "./customComponent/footer";
 import Masonry from "./customComponent/galaryFlow";
 import Feature from "./customComponent/feature";
 import NewDashboard from "./customComponent/NewDashboard";
+import PricingCards from "./customComponent/SellCard";
 // Register ScrollTrigger
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -314,6 +315,9 @@ const HomePage = () => {
       {/* <div ref={galleryRef} className="ml-[-600px] w-[200vw] h-[150vh]">
       <DemoGallery />
     </div> */}
+    <div className="w-screen  h-half">
+         <PricingCards />
+    </div>
 
 
     <div ref={galleryRef} className="w-full h-screen" style={{minHeight: '100vh'}}>
