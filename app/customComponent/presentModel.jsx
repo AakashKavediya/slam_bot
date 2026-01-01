@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 import IconCard from './IconCard'
 // 3D Model Component using your custom model
-function Model({ modelPath, scale = 2, position = [0, 0, 0] }) {
+function Model({ modelPath, scale = 2, position = [0, 0, 0], rotation = [0, 0, 0] }) {
   const { scene, error } = useGLTF(modelPath);
   const modelRef = useRef();
 
@@ -30,9 +30,18 @@ function Model({ modelPath, scale = 2, position = [0, 0, 0] }) {
     return null;
   }
 
+  // Normalize rotation values: convert degree-like values (> 2π) to radians
+  const rotationRad = Array.isArray(rotation)
+    ? rotation.map((v) => {
+        if (typeof v !== 'number' || isNaN(v)) return 0;
+        // if the value looks like degrees (e.g., 20.5), convert to radians
+        return Math.abs(v) > Math.PI * 2 ? (v * Math.PI) / 180 : v;
+      })
+    : [0, 0, 0];
+
   useFrame((state, delta) => {
     if (modelRef.current) {
-      modelRef.current.rotation.y += delta * 0.2; // Slow rotation
+      modelRef.current.rotation.z += delta * 0.2; // Slow rotation
     }
   });
 
@@ -42,6 +51,7 @@ function Model({ modelPath, scale = 2, position = [0, 0, 0] }) {
       object={scene} 
       scale={scale}
       position={position}
+      rotation={rotationRad}
       castShadow
       receiveShadow
     />
@@ -64,13 +74,13 @@ function FallbackScene() {
 
   return (
     <>
-      <ambientLight intensity={0.6} />
-      <directionalLight position={[5, 5, 5]} intensity={1} castShadow />
+      <ambientLight intensity={0} />
+      <directionalLight position={[5, 5, 5]} intensity={0} castShadow />
       
       <Float speed={2} rotationIntensity={1} floatIntensity={2}>
         <mesh ref={boxRef} position={[0, 0, 0]} castShadow>
           <boxGeometry args={[1, 1, 1]} />
-          <meshStandardMaterial color="#4f46e5" roughness={0.2} metalness={0.8} />
+          <meshStandardMaterial color="black" roughness={1} metalness={1} />
         </mesh>
       </Float>
       
@@ -88,28 +98,30 @@ function FallbackScene() {
 function Scene() {
   return (
     <>
-      <ambientLight intensity={0.8} />
+      <ambientLight intensity={0} />
       <directionalLight
         position={[10, 10, 5]} 
-        intensity={1.2}
-        castShadow
-        shadow-mapSize-width={2048}
-        shadow-mapSize-height={2048}
-        shadow-camera-far={50}
-        shadow-camera-left={-10}
-        shadow-camera-right={10}
-        shadow-camera-top={10}
-        shadow-camera-bottom={-10}
+        intensity={0}
+        // castShadow
+        // shadow-mapSize-width={2048}
+        // shadow-mapSize-height={2048}
+        // shadow-camera-far={50}
+        // shadow-camera-left={-10}
+        // shadow-camera-right={10}
+        // shadow-camera-top={10}
+        // shadow-camera-bottom={-10}
       />
-      <pointLight position={[-5, 5, -5]} intensity={0.8} color="#4f46e5" />
-      <pointLight position={[5, -5, 5]} intensity={0.6} color="#10b981" />
+      {/* <pointLight position={[-5, 5, -5]}  color="black" /> */}
+      {/* <pointLight position={[5, -5, 5]}  color="#black" /> */}
       
       {/* Import your custom model here */}
       <Suspense fallback={<FallbackScene />}>
         <Model 
-          modelPath="/Models/SlamBottt.glb" // Change this path to your model
-          scale={3} // Adjust scale as needed
-          position={[0, -2, 0]} // Adjust position as needed
+          modelPath="/Models/color_bot.glb" // Change this path to your model
+          scale={0.03} // Adjust scale as needed
+          position={[0.5, -2.4, 0]} // Adjust position as needed
+          rotation={[90, Math.PI / -60, 0]}
+
         />
       </Suspense>
       
@@ -177,7 +189,7 @@ function Loader() {
 }
 
 // Preload model for better performance
-useGLTF.preload('/Models/SlamBottt.glb');
+useGLTF.preload('/Models/color_bot.glb');
 
 export default function HomePage() {
   return (

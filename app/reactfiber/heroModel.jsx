@@ -16,7 +16,7 @@ function Model() {
 }
 
 function BotModel() {
-  const { scene } = useGLTF("./Models/base.glb")
+  const { scene } = useGLTF("./Models/color_bot.glb")
   const ref = useRef()
 
   const audioCtxRef = useRef(null)
@@ -97,8 +97,8 @@ function BotModel() {
       ref={ref}
       object={scene}
       position={[5, -10.5, -20]} // starting pos
-      scale={6}
-      rotation={[0, Math.PI / -30, 0]}
+      scale={0.06}
+      rotation={[20.5, Math.PI / -180, 0]}
     />
   )
 }

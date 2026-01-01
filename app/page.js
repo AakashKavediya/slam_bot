@@ -19,6 +19,7 @@ import Masonry from "./customComponent/galaryFlow";
 import Feature from "./customComponent/feature";
 import NewDashboard from "./customComponent/NewDashboard";
 import PricingCards from "./customComponent/SellCard";
+import Dashboard from "./customComponent/workDashboard";
 // Register ScrollTrigger
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -301,6 +302,9 @@ const HomePage = () => {
        <div className="w-screen  h-half">
          <NewDashboard />
        </div>
+       {/* <div className="w-screen  h-half">
+         <Dashboard />
+       </div> */}
 
 
        <div className="w-full h-screen">

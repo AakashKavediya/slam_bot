@@ -10,7 +10,7 @@ const PricingCards = () => {
       currency: "",
       period: "INR",
       tagline: "Unlock the full experience",
-      buttonText: "Get Plus",
+      buttonText: "Get ORIGIN",
       features: [
         { text: "SLAM navigation + mapping", checked: true },
         { text: "AI crop detection via mobile app", checked: true },
@@ -27,7 +27,7 @@ const PricingCards = () => {
       currency: "",
       period: "INR",
       tagline: "Maximize your productivity",
-      buttonText: "Get Pro",
+      buttonText: "Get APEX",
       features: [
         { text: "LiDAR-based SLAM (high precision)", checked: true },
         { text: "SLAM navigation + mapping", checked: true },

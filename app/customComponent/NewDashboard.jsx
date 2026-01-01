@@ -22,9 +22,9 @@ import {
 const NewDashboard = () => {
   // User Information
   const [userInfo, setUserInfo] = useState({
-    name: "Anup Mishra",
-    phone: "+91 6969696969",
-    email: "karan.mishra@example.com"
+    name: "Karan Mishra",
+    phone: "+91 9619612818",
+    email: "karan.mishra@gmail.com"
   });
 
   // Sensor Data State
