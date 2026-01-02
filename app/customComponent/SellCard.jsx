@@ -12,7 +12,7 @@ const PricingCards = () => {
       tagline: "Unlock the full experience",
       buttonText: "Get ORIGIN",
       features: [
-        { text: "SLAM navigation + mapping", checked: true },
+        { text: "ESP32 Cam Navigation", checked: true },
         { text: "AI crop detection via mobile app", checked: true },
         { text: "Precision spraying (40–50% savings)", checked: true },
         { text: "n8n → Telegram updates", checked: true },
