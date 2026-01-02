@@ -6,7 +6,7 @@ const PricingCards = () => {
   const plans = [
     {
       name: "SLAM BOT - ORIGIN",
-      price: "18,000",
+      price: "9,000",
       currency: "",
       period: "INR",
       tagline: "Unlock the full experience",
@@ -23,7 +23,7 @@ const PricingCards = () => {
     },
     {
       name: "SLAM BOT - APEX",
-      price: "25,000",
+      price: "18,000",
       currency: "",
       period: "INR",
       tagline: "Maximize your productivity",
